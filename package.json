@@ -1,0 +1,42 @@
+{
+  "name": "@isupreetk/typescript-sdk",
+  "version": "1.0.0",
+  "description": "`npm run build`",
+  "keywords": [],
+  "homepage": "https://github.com/isupreetk/typescript-sdk-demo#readme",
+  "bugs": {
+    "url": "https://github.com/isupreetk/typescript-sdk-demo/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/isupreetk/typescript-sdk-demo.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "author": "isupreetk",
+  "type": "commonjs",
+  "exports": {
+    "require": "./dist/index.js",
+    "default": "./dist/index.modern.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && microbundle --tsconfig tsconfig.json --no-sourcemap",
+    "dev": "microbundle --watch --tsconfig tsconfig.json --no-sourcemap"
+  },
+  "dependencies": {
+    "isomorphic-unfetch": "^4.0.2",
+    "typescript": "^5.0.4"
+  },
+  "devDependencies": {
+    "microbundle": "^0.15.1"
+  },
+  "module": "dist/index.m.js",
+  "unpkg": "dist/index.umd.js"
+}
